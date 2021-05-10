@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    if: github.event.repository.owner.id == github.event.sender.id
+#    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
     - name: Checkout
@@ -136,10 +136,10 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1.8.0
       with:
-        name: OpenWRT-R2S-R4S-X86-21.02.0-RC1
+        name: OpenWRT-R2S-21.02.0-RC1
         allowUpdates: true
         tag: 21.02.0-rc1
         commit: master
         replacesArtifacts: true
-        token: ${{ secrets.workflow_token }}
+        token: ${{ WORKFLOW_TOKEN }}
         artifacts: ./artifact/*.zip
