@@ -1,4 +1,4 @@
-name: R2S-OpenWrt-20210511
+name: R2S-OpenWrt
 
 on:
   repository_dispatch:
